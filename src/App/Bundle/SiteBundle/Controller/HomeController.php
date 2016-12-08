@@ -27,12 +27,14 @@ class HomeController extends Controller
         $this->coreHelper = $this->container->get('app.core_helper');
         $formuleItemContentTypeIdentifier = $this->container->getParameter('app.formule.content_type.identifier');
         $formulesLocationId = $this->container->getParameter('app.formules.locationid');
+        $worksItemContentTypeIdentifier = $this->container->getParameter('app.work.content_type.identifier');
+        $worksLocationId = $this->container->getParameter('app.works.locationid');
 
         $contact = new Contact();
         $form = $this->createForm($this->get('app.form.type.contact'), $contact, array());
         $params['form'] = $form->createView();
 
-        $params['works'] = array();
+        $params['works'] = $this->coreHelper->getChildrenObject([$worksItemContentTypeIdentifier], $worksLocationId);
         $params['blogLocationId'] = $this->container->getParameter('app.blog.locationid');
         $params['formules'] = $this->coreHelper->getChildrenObject([$formuleItemContentTypeIdentifier], $formulesLocationId);
         $response = $this->get('ez_content')->viewLocation(

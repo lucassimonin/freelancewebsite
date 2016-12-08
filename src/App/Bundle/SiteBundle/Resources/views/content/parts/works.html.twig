@@ -1,19 +1,21 @@
-<section id="works" class="padding-formule">
-    <div class="container">
+<section id="works">
+    <div class="container-fluid">
 
         <h2 class="formule black-color text-center text-uppercase">- {{ 'app.subtitle.works'|trans }} -</h2>
-        <div class="row formules-container">
-            {% for id, formule in formules %}
-                <div class="col-md-4 col-sm-4 col-xs-12 item-formule wow fadeInUp">
-                    <div class="title">
-                            <span class="text-uppercase text-bold">{{ ez_render_field(formule, 'title') }}</span>
-                            <span><span class="price text-bold">{{ ez_render_field(formule, 'price') }}€</span> <span class="bymonth">/mois</span></span>
-                    </div>
-                    <div class="content">
-                        {{ ez_render_field(formule, 'description') }}
-                        <div class="text-center bnt-container">
-                            <a href="#contact" class="formule-btn page-scroll go-contact" data-id="{{ id }}">{{ 'app.formule.btn'|trans }}</a>
+        <div class="row">
+            {% for work in works %}
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="item-work">
+                            <a target="_blank" href="{{ ez_field_value(work, 'url') }}">
+                                {{ ez_render_field(work, 'image') }}
+                                <span class="text-hover">
+                                    {{ ez_render_field(work, 'name') }}<br/>
+                                    <i>{{ ez_render_field(work, 'description') }}</i>
+                                </span>
+                            </a>
                         </div>
+
                     </div>
                 </div>
             {% endfor %}
