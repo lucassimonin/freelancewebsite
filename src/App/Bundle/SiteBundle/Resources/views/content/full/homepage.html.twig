@@ -2,38 +2,24 @@
 {% block content %}
     {% include 'AppSiteBundle::pagelayout/page_header.html.twig' %}
     {% include 'AppSiteBundle::pagelayout/page_navigation.html.twig' %}
-    <section id="program" style="background-image:url('{{ ez_field_value(content, 'image_programe').uri }}');">
-        <div class="container text-center wow fadeInUp">
-            <div class="black-title">{{ 'app.subtitle.program'|trans }}</div>
-
-            <h2 class="margin">{{ ez_render_field(content, 'title_programme') }}</h2>
-            <div class="col-md-6 col-md-offset-3">
-                {{ ez_render_field(content, 'description_programme') }}
-                <hr>
-            </div>
-
-        </div>
-    </section>
-    <section id="coach" class="container-fluid no-padding">
+    <section id="presentation" class="container-fluid bg-blue">
         <div class="row">
-            <div class="col-md-6 col-sm-6 col-sm-push-6 wow fadeInRight coach-picture">
+            <div class="col-md-6 col-sm-6 col-sm-push-6 wow text-center fadeInRight my-picture">
                 {{ ez_render_field(content, 'image_bio') }}
             </div>
             <div class="col-md-6 col-sm-6 col-sm-pull-6 text-center black-color padding-tb wow fadeInLeft">
-                <div class="black-title">{{ 'app.subtitle.coach'|trans }}</div>
-                <h2 class="margin green">{{ ez_render_field(content, 'coach_name') }}</h2>
+                <div class="black-title">{{ 'app.subtitle.me'|trans }}</div>
                 <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                    {{ ez_render_field(content, 'description_programme') }}
-                    <hr>
+                    {{ ez_render_field(content, 'text_bio') }}
                 </div>
             </div>
         </div>
     </section>
     {% if formules|length > 0 %}
-        {% include 'AppSiteBundle::content/parts/formules.html.twig' %}
+        {% include 'AppSiteBundle::content/parts/services.html.twig' %}
     {% endif %}
-    {% if articles|length > 0 %}
-        {% include 'AppSiteBundle::content/parts/blog.html.twig' %}
+    {% if works|length > 0 %}
+        {% include 'AppSiteBundle::content/parts/works.html.twig' %}
     {% endif %}
     {% include 'AppSiteBundle::content/parts/contact.html.twig' %}
 {% endblock %}

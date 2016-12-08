@@ -53,6 +53,14 @@ var resetForm = function() {
 
 $( document ).ready(function() {
 
+  if($(".typed").length) {
+    $(".typed").typed({
+      strings: [$("#typedone").val(), $("#typedtwo").val(), $("#typedthree").val()],
+      typeSpeed: 100,
+      loop: true
+    });
+  }
+
   $(document).on('click', '.go-contact', function(){
     $("#contact_type_subject").val($(this).data('id'));
 

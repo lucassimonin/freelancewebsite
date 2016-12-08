@@ -12,16 +12,16 @@ ezpublish:
 
     # Siteaccess configuration, with one siteaccess per default
     siteaccess:
-        list: [movidiet, movidiet_en]
+        list: [freelancewebsite, freelancewebsite_en]
         groups:
-            site_group: [movidiet, movidiet_en]
-        default_siteaccess: movidiet
+            site_group: [freelancewebsite, freelancewebsite_en]
+        default_siteaccess: freelancewebsite
 
     # System settings, grouped by siteaccess and/or siteaccess group
     system:
-        movidiet:
+        freelancewebsite:
             languages: [fre-FR]
-        movidiet_en:
+        freelancewebsite_en:
             languages: [eng-GB, fre-FR]
         site_group:
             content:

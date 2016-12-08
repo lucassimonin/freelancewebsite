@@ -1,16 +1,22 @@
-app.global.title: 'Mov.i<span class="green">Diet</span>'
-app.global.meta_title: Mov.iDiet
-app.title.program: Programme
-app.title.coach: Coach
-app.title.formule: Formules
+app.global.title: 'Lucas <span class="blue">SIMONIN</span>'
+app.global.meta_title: Lucas SIMONIN
+app.typed.partone: Freelance front and Back end.
+app.typed.parttwo: I create websites.
+app.typed.partthree: From integration to developpement.
+app.title.presentation: Presentation
+app.title.services: Services
+app.title.works: Works
 app.title.blog: Blog
+app.title.cv: CV
 app.title.contact: Contact
 app.subtitle.program: Le programme Mov.iDiet
-app.subtitle.coach: Votre coach
-app.subtitle.formule: Des programmes adaptés à vos besoins
-app.subtitle.formule_two: Nos Formules
-app.formule.btn: Je m'inscris
+app.subtitle.me: Votre coach
+app.subtitle.service.title: My services
+app.subtitle.service.subtitleone: What I propose
+app.subtitle.service.subtitletwo: My formules
+app.formule.btn: Estimate
 app.subtitle.blog: Le blog
 app.blog.btn.article: Lire l'article
 app.blog.btn.all_article: Voir tous les articles
-app.subtitle.contact: Contactez nous
+
+app.subtitle.contact: Contact me

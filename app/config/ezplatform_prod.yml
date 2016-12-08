@@ -3,27 +3,27 @@ imports:
 
 ezpublish:
     system:
-        movidiet:
+        freelancewebsite:
             languages: [fre-FR]
-        movidiet_en:
+        freelancewebsite_en:
             # In site_authors_sanofi_fr siteaccess, fre-FR is always preferred, and fallback to eng-US if needed.
             languages: [eng-GB, fre-FR]
     siteaccess:
         match:
             Compound\LogicalAnd:
-                movidiet:
+                freelancewebsite:
                     matchers:
                         Map\URI:
                             fr: true
                         Map\Host:
-                            movidiet.com: true
-                    match: movidiet
-                movidiet_en:
+                            lucasimonin.me: true
+                    match: freelancewebsite
+                freelancewebsite_en:
                     matchers:
                         Map\URI:
                             en: true
                         Map\Host:
-                            movidiet.com: true
-                    match: movidiet_en
+                            lucasimonin.me: true
+                    match: freelancewebsite_en
             Map\Host:
-                movidiet.com: movidiet
+                lucasimonin.me: freelancewebsite

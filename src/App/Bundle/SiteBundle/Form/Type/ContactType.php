@@ -35,9 +35,8 @@ class ContactType extends AbstractType
             ->add('email', 'email', array('required' => true))
             ->add('subject', 'choice', array(
                 'choices' => array(
-                    'Formule classic',
-                    'Formule medium',
-                    'Formule Pro',
+                    'Silver',
+                    'Gold',
                     'Autre'
                 ),
                 'required' => true

@@ -1,0 +1,44 @@
+<section id="services">
+    <div class="container">
+
+        <h2 class="formule black-color text-center text-uppercase">- {{ 'app.subtitle.service.title'|trans }} -</h2>
+        <div class="black-title text-center">{{ 'app.subtitle.service.subtitleone'|trans }}</div>
+
+        <div class="row margintb">
+            <div class="col-md-6 col-sm-6 col-sm-push-6 wow text-center fadeInRight max">
+                {{ ez_render_field(content, 'image_service') }}
+            </div>
+            <div class="col-md-6 col-sm-6 col-sm-pull-6 margintb text-justify black-color wow fadeInLeft">
+                    {{ ez_render_field(content, 'text_service') }}
+            </div>
+        </div>
+        <div class="row margintb">
+            <div class="col-md-6 col-sm-6 wow text-center fadeInLeft max">
+                {{ ez_render_field(content, 'image_techno') }}
+            </div>
+            <div class="col-md-6 col-sm-6 text-justify margintb black-color wow fadeInRight">
+                    {{ ez_render_field(content, 'text_techno') }}
+            </div>
+
+        </div>
+
+        <div class="black-title text-center">{{ 'app.subtitle.service.subtitletwo'|trans }}</div>
+        <div class="row formules-container">
+            {% for id, formule in formules %}
+                <div class="col-md-4 col-sm-4 col-xs-12 item-formule wow fadeInUp">
+                    <div class="title {{ ez_render_field(formule, 'title')|striptags|lower }}">
+                            <span class="text-uppercase text-bold">{{ ez_render_field(formule, 'title') }}</span>
+                    </div>
+                    <div class="content">
+                        {{ ez_render_field(formule, 'description') }}
+                        {% if ez_render_field(formule, 'title')|striptags|lower != 'ecommerce' %}
+                        <div class="text-center bnt-container">
+                            <a href="#contact" class="formule-btn page-scroll go-contact" data-id="{{ id }}">{{ 'app.formule.btn'|trans }}</a>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

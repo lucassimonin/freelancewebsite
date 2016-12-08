@@ -27,36 +27,12 @@ class HomeController extends Controller
         $this->coreHelper = $this->container->get('app.core_helper');
         $formuleItemContentTypeIdentifier = $this->container->getParameter('app.formule.content_type.identifier');
         $formulesLocationId = $this->container->getParameter('app.formules.locationid');
-        $articles = array();
-        // Sport
-        $article = $this->coreHelper->getLatestArticles($this->container->getParameter('app.article.category.sport'));
-        if( $article != null) {
-            array_push($articles, $article);
-        }
-        // Diet
-        $article = $this->coreHelper->getLatestArticles($this->container->getParameter('app.article.category.diet'));
-        if( $article != null) {
-            if($articles != null) {
-                array_push($articles, $article);
-            } else {
-                $articles = $article;
-            }
-        }
-        //Recipe
-        $article = $this->coreHelper->getLatestArticles($this->container->getParameter('app.article.category.recipe'));
-        if( $article != null) {
-            if($articles != null) {
-                array_push($articles, $article);
-            } else {
-                $articles = $article;
-            }
-        }
 
         $contact = new Contact();
         $form = $this->createForm($this->get('app.form.type.contact'), $contact, array());
         $params['form'] = $form->createView();
 
-        $params['articles'] = $articles;
+        $params['works'] = array();
         $params['blogLocationId'] = $this->container->getParameter('app.blog.locationid');
         $params['formules'] = $this->coreHelper->getChildrenObject([$formuleItemContentTypeIdentifier], $formulesLocationId);
         $response = $this->get('ez_content')->viewLocation(
