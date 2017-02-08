@@ -708,6 +708,25 @@ img::-moz-selection {
     margin-bottom: 20px;
   }
 
+  #contact h2 {
+    font-size: 25px;
+  }
+  #contact p, #contact a {
+    font-size: 15px;
+  }
+  .marginbtmobile {
+    margin-bottom: 20px;
+  }
+
+  #contact a {
+    border-bottom: none;
+  }
+
+
+  #contact .subtitle {
+    font-size: 16px;
+  }
+
 }
 
 @media (max-width: 320px) {
