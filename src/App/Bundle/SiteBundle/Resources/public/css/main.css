@@ -657,6 +657,8 @@ img::-moz-selection {
 
 #works {
   padding-bottom: 0;
+  padding-top: 20px;
+  background-color: #eee;
 }
 
 .header-text {
@@ -701,7 +703,7 @@ img::-moz-selection {
   }
 
   h2.formule, h2.blog, h2.contact {
-    font-size: 30px;
+    font-size: 28px;
   }
   .navbar-nav {
     margin:0;
