@@ -26,4 +26,4 @@ ezpublish:
                             lucasimonin.me: true
                     match: freelancewebsite_en
             Map\Host:
-                lucasimonin.me: freelancewebsite
+                freelance.lucasimonin.me: freelancewebsite
