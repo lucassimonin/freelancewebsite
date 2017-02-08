@@ -16,14 +16,14 @@ ezpublish:
                         Map\URI:
                             fr: true
                         Map\Host:
-                            lucasimonin.me: true
+                            freelance.lucasimonin.me: true
                     match: freelancewebsite
                 freelancewebsite_en:
                     matchers:
                         Map\URI:
                             en: true
                         Map\Host:
-                            lucasimonin.me: true
+                            freelance.lucasimonin.me: true
                     match: freelancewebsite_en
             Map\Host:
                 freelance.lucasimonin.me: freelancewebsite
