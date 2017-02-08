@@ -42,7 +42,6 @@ class CoreHelper
      * Constructor
      * @param Repository $repository
      * @param Container  $container
-     * @param SiteAccess $siteAccess
      */
     public function __construct(Repository $repository, $container)
     {

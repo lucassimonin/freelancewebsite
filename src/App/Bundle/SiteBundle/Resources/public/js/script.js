@@ -55,10 +55,13 @@ $( document ).ready(function() {
 
   if($(".typed").length) {
     $(".typed").typed({
-      strings: [$("#typedone").val(), $("#typedtwo").val(), $("#typedthree").val()],
+      strings: [$("#typedone").val(), $("#typedtwo").val()],
       typeSpeed: 100,
       loop: true
     });
+  }
+  if($(".timer").length) {
+    $('.timer').countTo();
   }
 
   $(document).on('click', '.go-contact', function(){

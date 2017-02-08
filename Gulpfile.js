@@ -27,6 +27,7 @@ var paths = {
             'web/assets/vendor/classie/classie.js',
             'web/assets/vendor/wow/dist/wow.min.js',
             'web/assets/vendor/typed.js/dist/typed.min.js',
+            'web/assets/vendor/jquery-countTo/jquery.countTo.js',
             'web/bundles/appsite/js/script.js'
         ],
         js_ie: [

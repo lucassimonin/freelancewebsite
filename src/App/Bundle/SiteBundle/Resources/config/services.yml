@@ -7,5 +7,6 @@ services:
             arguments: [@ezpublish.siteaccess]
     app.form.type.contact:
             class: %app.form.type.contact.class%
+            arguments: [@service_container]
             tags:
                 - { name: form.type, alias: contact_type }

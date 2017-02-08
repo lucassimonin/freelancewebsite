@@ -1,24 +1,21 @@
-<section id="works">
-    <div class="container-fluid">
-
-        <h2 class="formule black-color text-center text-uppercase">- {{ 'app.subtitle.works'|trans }} -</h2>
-        <div class="row">
-            {% for work in works %}
-                <div class="col-md-4">
-                    <div class="row">
-                        <div class="item-work">
-                            <a target="_blank" href="{{ ez_field_value(work, 'url') }}">
-                                {{ ez_render_field(work, 'image') }}
-                                <span class="text-hover">
-                                    {{ ez_render_field(work, 'name') }}<br/>
-                                    <i>{{ ez_render_field(work, 'description') }}</i>
-                                </span>
-                            </a>
-                        </div>
-
+<section id="works" class="container-fluid bg-blue">
+    <h2 class="formule black-color text-center text-uppercase">- {{ 'app.subtitle.works'|trans }} -</h2>
+    <div class="row">
+        {% for work in works %}
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="item-work">
+                        <a target="_blank" href="{{ ez_field_value(work, 'url') }}">
+                            {{ ez_render_field(work, 'image') }}
+                            <span class="text-hover">
+                                {{ ez_render_field(work, 'name') }}<br/>
+                                <i>{{ ez_render_field(work, 'description') }}</i>
+                            </span>
+                        </a>
                     </div>
+
                 </div>
-            {% endfor %}
-        </div>
+            </div>
+        {% endfor %}
     </div>
 </section>

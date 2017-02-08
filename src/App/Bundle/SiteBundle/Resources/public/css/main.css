@@ -56,6 +56,39 @@ h2 {
 
 .bg-blue {
   background-color: #E4F1FE;
+  background-size: cover;
+}
+
+#contact h2 {
+  text-align: left;
+  font-size: 60px;
+  margin-bottom: 30px;
+}
+
+#contact  p, #contact a {
+  font-size: 16px;
+
+}
+
+#contact a {
+  border-bottom: 1px dotted #fff;
+  color: #fff;
+}
+
+#contact a:hover, #contact a:focus, #contact a:active {
+  text-decoration: none;
+  border-bottom: none;
+}
+
+#contact p {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+#contact .subtitle {
+  margin-bottom: 30px;
+  font-size: 27px;
+  text-transform: inherit;
 }
 
 .black-color {
@@ -332,6 +365,7 @@ header {
 
 #services img {
   max-width: 100%;
+  width: 65%;
 }
 
 .item-formule .content {
@@ -344,6 +378,15 @@ header {
   border-right: 1px solid #bdc3c7;
   box-shadow: 2px 2px 1px #eee;
 
+}
+
+#presentation h3 {
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+#presentation hr {
+  margin-bottom: 20px;
 }
 
 .item-formule .ezrichtext-field p {
@@ -367,11 +410,43 @@ header {
   margin-top:50px;
 }
 
+.nopaddingb {
+  padding-bottom: 0;
+}
+
 .formule-btn {
   background: transparent;
   border: 1px solid #333;
   padding: 5px 20px;
   text-transform: uppercase;
+  font-size:24px;
+}
+
+.stat {
+  font-size: 20px;
+}
+
+.stat p {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.stat i {
+  font-size: 16px;
+}
+
+.stat i.fa {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+
+.stat hr {
+  border-color: #fff;
+}
+
+.bg-black {
+  background-color: #333;
 }
 
 .article-btn {
@@ -575,6 +650,15 @@ img::-moz-selection {
   100% { opacity:1; }
 }
 
+#contact {
+  padding:150px 0 250px 0;
+  background-size: cover;
+}
+
+#works {
+  padding-bottom: 0;
+}
+
 .header-text {
   margin-top:15px;
 }
@@ -589,6 +673,16 @@ img::-moz-selection {
 
 .header-text.btn:hover {
   background-color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .icon-size {
+    font-size: 12px;
+  }
+  #presentation .padding-tb {
+    padding:0;
+  }
+
 }
 
 @media (max-width: 767px) {
@@ -610,7 +704,16 @@ img::-moz-selection {
     height: auto;
     white-space: inherit;
   }
+  .icon-marginb {
+    margin-bottom: 20px;
+  }
 
+}
+
+@media (max-width: 320px) {
+  h2.formule, h2.contact {
+    font-size: 22px;
+  }
 }
 @media (min-width: 768px) {
   .navbar-default .nav>li>a {
@@ -618,6 +721,8 @@ img::-moz-selection {
   }
 
 }
+
+
 @media (min-width: 992px) {
   .navbar-default .nav>li>a {
     font-size: 13px;

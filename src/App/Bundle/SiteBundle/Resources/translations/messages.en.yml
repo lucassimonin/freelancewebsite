@@ -1,7 +1,6 @@
 app.global.title: 'Lucas <span class="blue">SIMONIN</span>'
 app.global.meta_title: Lucas SIMONIN
-app.typed.partone: Freelance front and Back end.
-app.typed.parttwo: I create websites.
+app.typed.parttwo: I craft websites.
 app.typed.partthree: From integration to developpement.
 app.title.presentation: Presentation
 app.title.services: Services
@@ -9,14 +8,28 @@ app.title.works: Works
 app.title.blog: Blog
 app.title.cv: CV
 app.title.contact: Contact
-app.subtitle.program: Le programme Mov.iDiet
-app.subtitle.me: Votre coach
-app.subtitle.service.title: My services
-app.subtitle.service.subtitleone: What I propose
-app.subtitle.service.subtitletwo: My formules
-app.formule.btn: Estimate
-app.subtitle.blog: Le blog
-app.blog.btn.article: Lire l'article
-app.blog.btn.all_article: Voir tous les articles
-
-app.subtitle.contact: Contact me
+app.subtitle.contact: Let's meet up.
+app.contact_text: If you’d like to talk about a project, my work or anything else then get in touch.
+app.contact.title.email: Email
+app.contact.title.phone: Phone
+app.contact.title.based: Based in
+app.contact.title.cv: Cv
+app.passion: Passionate
+app.web_addict: Web addict
+app.travel: Traveler
+app.sport: Athletic
+app.xp.one: Years of experience
+app.xp.two: Always more motivated
+app.work.one: Evening or weekend work
+app.work.two: For the moment
+app.music.one: musics
+app.music.two: Listened per day
+app.contact.name: Name
+app.contact.email: Email
+app.contact.subject: Subject
+app.contact.message: Your message
+app.contact.send: Send
+app.contact.option.choose: Choose option
+app.contact.option.website: Website creation
+app.contact.option.propose: Mission to propose
+app.contact.option.other: Other

@@ -14,11 +14,6 @@
                 <li>
                     <a class="page-scroll" href="#presentation">{{ 'app.title.presentation'|trans }}</a>
                 </li>
-                {% if formules|length > 0 %}
-                    <li>
-                        <a class="page-scroll" href="#services">{{ 'app.title.services'|trans }}</a>
-                    </li>
-                {% endif %}
                 {% if works|length > 0 %}
                     <li>
                         <a class="page-scroll" href="#works">{{ 'app.title.works'|trans }}</a>
@@ -26,9 +21,6 @@
                 {% endif %}
                 <li>
                     <a class="page-scroll" href="#contact">{{ 'app.title.contact'|trans }}</a>
-                </li>
-                <li>
-                    <a href="{{ path( "ez_urlalias", {"locationId": blogLocationId} ) }}" target="_blank">{{ 'app.title.blog'|trans }}</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">

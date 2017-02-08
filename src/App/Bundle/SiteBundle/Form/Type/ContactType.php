@@ -20,24 +20,37 @@ use eZ\Publish\API\Repository\Repository;
  */
 class ContactType extends AbstractType
 {
+    /** @var \Symfony\Component\DependencyInjection\Container */
+    protected $container;
+
+    /**
+     * Constructor
+     * @param Container  $container
+     */
+    public function __construct($container)
+    {
+        $this->container = $container;
+    }
+
     /**
      * Build form.
      *
      * @param FormBuilderInterface $builder
      * @param array                $options
      *
-     * @SuppressWarnings(PHPMD.UnusedFormalParameter) Inheritance of onKernelRequest.
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+        $translator = $this->container->get('translator');
         $builder
             ->add('name', 'text', array('required' => true))
             ->add('email', 'email', array('required' => true))
             ->add('subject', 'choice', array(
                 'choices' => array(
-                    'Silver',
-                    'Gold',
-                    'Autre'
+                    null => $translator->trans('app.contact.option.choose'),
+                    0    => $translator->trans('app.contact.option.website'),
+                    1    => $translator->trans('app.contact.option.propose'),
+                    2    => $translator->trans('app.contact.option.other')
                 ),
                 'required' => true
             ))
