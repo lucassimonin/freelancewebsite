@@ -26,17 +26,17 @@
             <ul class="nav navbar-nav navbar-right">
                 {% if not ez_is_field_empty(content, 'linkedin_url') %}
                     <li>
-                        <a class="btn btn-social-icon btn-linkedin" href="{{ ez_field_value(content, 'linkedin_url') }}" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        <a rel="nofollow" class="btn btn-social-icon btn-linkedin" href="{{ ez_field_value(content, 'linkedin_url') }}" target="_blank"><i class="fa fa-linkedin"></i></a>
                     </li>
                 {% endif %}
                 {% if not ez_is_field_empty(content, 'twitter_url') %}
                     <li>
-                        <a class="btn btn-social-icon btn-twitter" href="{{ ez_field_value(content, 'twitter_url') }}" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a rel="nofollow" class="btn btn-social-icon btn-twitter" href="{{ ez_field_value(content, 'twitter_url') }}" target="_blank"><i class="fa fa-twitter"></i></a>
                     </li>
                 {% endif %}
                 {% if not ez_is_field_empty(content, 'github_url') %}
                     <li>
-                        <a class="btn btn-social-icon btn-github" href="{{ ez_field_value(content, 'github_url') }}" target="_blank"><i class="fa fa-github-alt"></i></a>
+                        <a rel="nofollow" class="btn btn-social-icon btn-github" href="{{ ez_field_value(content, 'github_url') }}" target="_blank"><i class="fa fa-github-alt"></i></a>
                     </li>
                 {% endif %}
                 {{ render( controller( 'AppSiteBundle:Common:languages', {'routeRef': ez_route()} ) ) }}

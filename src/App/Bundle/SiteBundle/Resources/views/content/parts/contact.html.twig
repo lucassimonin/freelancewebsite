@@ -9,20 +9,20 @@
             <div class="row">
                 <div class="col-sm-3 col-xs-6 marginbtmobile">
                     <p>{{ 'app.contact.title.email'|trans }}</p>
-                    <a href="mailto:{{ ez_field_value(content, 'email_contact') }}">{{ ez_field_value(content, 'email_contact') }}</a>
+                    <a rel="external" href="mailto:{{ ez_field_value(content, 'email_contact') }}">{{ ez_field_value(content, 'email_contact') }}</a>
                 </div>
                 <div class="col-sm-3 col-xs-6 marginbtmobile">
                     <p>{{ 'app.contact.title.phone'|trans }}</p>
 
-                    <a href="tel:{{ ez_field_value(content, 'phone') }}">{{ ez_field_value(content, 'phone') }}</a>
+                    <a rel="external" href="tel:{{ ez_field_value(content, 'phone') }}">{{ ez_field_value(content, 'phone') }}</a>
                 </div>
                 <div class="col-sm-3 col-xs-6">
                     <p>{{ 'app.contact.title.cv'|trans }}</p>
-                    <a href="{{ ez_field_value(content, 'cv_url') }}" target="_blank">{{ ez_field_value(content, 'cv_url').text }}</a>
+                    <a rel="external" href="{{ ez_field_value(content, 'cv_url') }}" target="_blank">{{ ez_field_value(content, 'cv_url').text }}</a>
                 </div>
                 <div class="col-sm-3 col-xs-6">
                     <p>{{ 'app.contact.title.based'|trans }}</p>
-                    <a href="{{ ez_field_value(content, 'city_url') }}" target="_blank">{{ ez_field_value(content, 'city_url').text }}</a>
+                    <a rel="nofollow" href="{{ ez_field_value(content, 'city_url') }}" target="_blank">{{ ez_field_value(content, 'city_url').text }}</a>
                 </div>
 
 
