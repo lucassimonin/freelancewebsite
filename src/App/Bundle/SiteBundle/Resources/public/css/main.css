@@ -651,7 +651,7 @@ img::-moz-selection {
 }
 
 #contact {
-  padding:150px 0 250px 0;
+  padding:200px 0 250px 0;
   background-size: cover;
 }
 
@@ -852,7 +852,11 @@ figure.effect:hover p {
   h2.formule, h2.contact {
     font-size: 22px;
   }
+  #contact p, #contact a {
+    font-size: 12px;
+  }
 }
+
 @media (min-width: 768px) {
   .navbar-default .nav>li>a {
     font-size: 10px;
