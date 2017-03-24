@@ -30,10 +30,6 @@ class HomeController extends Controller
         $worksItemContentTypeIdentifier = $this->container->getParameter('app.work.content_type.identifier');
         $worksLocationId = $this->container->getParameter('app.works.locationid');
 
-        $contact = new Contact();
-        $form = $this->createForm($this->get('app.form.type.contact'), $contact, array());
-        $params['form'] = $form->createView();
-
         $params['works'] = $this->coreHelper->getChildrenObject([$worksItemContentTypeIdentifier], $worksLocationId);
         $params['blogLocationId'] = $this->container->getParameter('app.blog.locationid');
         $params['formules'] = $this->coreHelper->getChildrenObject([$formuleItemContentTypeIdentifier], $formulesLocationId);
