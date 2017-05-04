@@ -1,35 +1,31 @@
-<section id="contact" style="background-image:url('{{ ez_field_value(content, 'image_contact').uri }}');">
-    <div class="container">
-        <div class="col-lg-12">
-            <h2 class="green text-center text-uppercase contact"> {{ 'app.subtitle.contact'|trans }} </h2>
-
-            <p class="subtitle">{{ 'app.contact_text'|trans }}</p>
-        </div>
-        <div class="col-lg-12">
-            <div class="row">
-                <div class="col-sm-3 col-xs-6 marginbtmobile">
-                    <p>{{ 'app.contact.title.email'|trans }}</p>
-                    <a rel="external" href="mailto:{{ ez_field_value(content, 'email_contact') }}">{{ ez_field_value(content, 'email_contact') }}</a>
+{% spaceless %}
+    <section id="contact" style="background-image:url('{{ ez_field_value(content, 'image_contact').uri }}');">
+        <div class="container">
+            <div class="col-lg-12">
+                <h2 class="green text-center text-uppercase contact"> {{ 'app.subtitle.contact'|trans }} </h2>
+                <p class="subtitle">{{ 'app.contact_text'|trans }}</p>
+            </div>
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-sm-3 col-xs-6 marginbtmobile">
+                        <p>{{ 'app.contact.title.email'|trans }}</p>
+                        <a rel="external" href="mailto:{{ ez_field_value(content, 'email_contact') }}">{{ ez_field_value(content, 'email_contact') }}</a>
+                    </div>
+                    <div class="col-sm-3 col-xs-6 marginbtmobile">
+                        <p>{{ 'app.contact.title.phone'|trans }}</p>
+    
+                        <a rel="external" href="tel:{{ ez_field_value(content, 'phone') }}">{{ ez_field_value(content, 'phone') }}</a>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <p>{{ 'app.contact.title.cv'|trans }}</p>
+                        <a rel="external" href="{{ ez_field_value(content, 'cv_url') }}" target="_blank">{{ ez_field_value(content, 'cv_url').text }}</a>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <p>{{ 'app.contact.title.based'|trans }}</p>
+                        <a rel="nofollow" href="{{ ez_field_value(content, 'city_url') }}" target="_blank">{{ ez_field_value(content, 'city_url').text }}</a>
+                    </div>
                 </div>
-                <div class="col-sm-3 col-xs-6 marginbtmobile">
-                    <p>{{ 'app.contact.title.phone'|trans }}</p>
-
-                    <a rel="external" href="tel:{{ ez_field_value(content, 'phone') }}">{{ ez_field_value(content, 'phone') }}</a>
-                </div>
-                <div class="col-sm-3 col-xs-6">
-                    <p>{{ 'app.contact.title.cv'|trans }}</p>
-                    <a rel="external" href="{{ ez_field_value(content, 'cv_url') }}" target="_blank">{{ ez_field_value(content, 'cv_url').text }}</a>
-                </div>
-                <div class="col-sm-3 col-xs-6">
-                    <p>{{ 'app.contact.title.based'|trans }}</p>
-                    <a rel="nofollow" href="{{ ez_field_value(content, 'city_url') }}" target="_blank">{{ ez_field_value(content, 'city_url').text }}</a>
-                </div>
-
-
             </div>
         </div>
-
-
-
-    </div>
-</section>
+    </section>
+{% endspaceless %}

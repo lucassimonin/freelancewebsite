@@ -1,7 +1,9 @@
-<div class="clearfix"></div>
-<footer>
-    <div class="container">
-        Lucas SIMONIN ©
-        <span id="copyright-year">{{ "now"|date("Y") }}</span>
-    </div>
-</footer>
+{% spaceless %}
+    <div class="clearfix"></div>
+    <footer>
+        <div class="container">
+            Lucas SIMONIN ©
+            <span id="copyright-year">{{ "now"|date("Y") }}</span>
+        </div>
+    </footer>
+{% endspaceless %}

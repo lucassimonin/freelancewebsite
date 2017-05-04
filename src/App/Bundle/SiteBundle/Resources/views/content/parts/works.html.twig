@@ -1,3 +1,4 @@
+{% spaceless %}
     <section id="works" class="container">
         <h2 class="formule black-color text-center text-uppercase">- {{ 'app.subtitle.works'|trans }} -</h2>
         <div class="row">
@@ -5,18 +6,18 @@
                 <div class="col-md-6 col-sm-12 col-xs-12">
                     <figure class="effect">
                         {{ ez_render_field(work, 'image') }}
-
                         <figcaption>
                             <h3>{{ ez_render_field(work, 'name') }}</h3>
                             {{ ez_render_field(work, 'description_site') }}
                             <p><strong>Tags:</strong> <br>{{ ez_render_field(work, 'description') }}</p>
                             <a rel="external" href="{{ ez_field_value(work, 'url') }}" target="_blank">View more</a>
-				<span class="icon">
-					<i class="fa fa-external-link" aria-hidden="true"></i>
-				</span>
+                            <span class="icon">
+                                <i class="fa fa-external-link" aria-hidden="true"></i>
+                            </span>
                         </figcaption>
                     </figure>
                 </div>
             {% endfor %}
         </div>
     </section>
+{% endspaceless %}

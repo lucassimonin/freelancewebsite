@@ -12,17 +12,13 @@ use Symfony\Component\HttpFoundation\Request;
  * CommonController Class.
  *
  * @author simoninl
- * @SuppressWarnings(PHPMD.ExcessiveClassComplexity)
- * @SuppressWarnings(PHPMD.TooManyPublicMethods)
- * @SuppressWarnings(PHPMD.ExcessiveClassLength)
- * @SuppressWarnings(PHPMD.TooManyFields)
  */
 class CommonController extends Controller
 {
-
     /**
      * languagesAction
      *
+     * @param Request        $request
      * @param RouteReference $routeRef
      * @return \Symfony\Component\HttpFoundation\Response
      */
@@ -31,13 +27,34 @@ class CommonController extends Controller
         // get cuurent eZ language
         $currentSFLanguage = $request->get( '_locale');
         $currentEzLanguage = array_search(
-            $currentSFLanguage ,
-            $this->container->getParameter( 'ezpublish.locale.conversion_map' )
-        );
+                $currentSFLanguage ,
+                $this->container->getParameter( 'ezpublish.locale.conversion_map' )
+                );
 
         return $this->render( '@AppSite/content/parts/languages.html.twig',
-            array('currentLanguage' => $currentEzLanguage, 'routeRef' => $routeRef)
-        );
+                array('currentLanguage' => $currentEzLanguage, 'routeRef' => $routeRef)
+                );
     }
 
+    /**
+     * hrefLanguagesAction
+     *
+     * @param Request        $request
+     * @param RouteReference $routeRef
+     * @param integer        $locationId
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function hrefLanguagesAction(Request $request, RouteReference $routeRef, $locationId )
+    {
+        // get cuurent eZ language
+        $currentSFLanguage = $request->get( '_locale');
+        $currentEzLanguage = array_search(
+                $currentSFLanguage ,
+                $this->container->getParameter( 'ezpublish.locale.conversion_map' )
+                );
+
+        return $this->render( '@AppSite/content/parts/hreflang.html.twig',
+                array('currentLanguage' => $currentEzLanguage, 'routeRef' => $routeRef, 'locationId' => $locationId)
+                );
+    }
 }
