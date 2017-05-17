@@ -12,35 +12,29 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 class HomeController extends Controller
 {
     /** @var  CoreHelper */
-    protected $coreHelper;
+    private $coreHelper;
 
     /**
      * Homepage action
-     * @param $locationId
-     * @param $viewType
-     * @param bool $layout
-     * @param array $params
-     * @return mixed
+     * @param View $view
+     * @return View
      */
-    public function indexAction($locationId, $viewType, $layout = false, array $params = array())
+    public function indexAction(View $view)
     {
         $this->coreHelper = $this->container->get('app.core_helper');
         $worksItemContentTypeIdentifier = $this->container->getParameter('app.work.content_type.identifier');
         $worksLocationId = $this->container->getParameter('app.works.locationid');
 
         $params['works'] = $this->coreHelper->getChildrenObject([$worksItemContentTypeIdentifier], $worksLocationId);
-        $response = $this->get('ez_content')->viewLocation(
-            $locationId,
-            $viewType,
-            $layout,
-            $params
-        );
-
-        $response->headers->set('X-Location-Id', $locationId);
-        $response->setEtag(md5(json_encode($params)));
-        $response->setPublic();
+        $response = new Response();
+        $response->setPrivate();
         $response->setSharedMaxAge($this->container->getParameter('app.cache.high.ttl'));
+        $response->setLastModified($view->getContent()->versionInfo->modificationDate);
+        $view->setResponse($response);
+        $view->addParameters([
+            'params' => $params
+        ]);
 
-        return $response;
+        return $view;
     }
 }
