@@ -4,10 +4,7 @@ namespace App\Bundle\SiteBundle\Controller;
 
 use App\Bundle\SiteBundle\Helper\CoreHelper;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use App\Bundle\SiteBundle\Entity\Contact;
-use Symfony\Component\HttpFoundation\JsonResponse;
 
 class HomeController extends Controller
 {
