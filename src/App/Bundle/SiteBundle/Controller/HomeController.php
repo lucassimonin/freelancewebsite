@@ -5,6 +5,7 @@ namespace App\Bundle\SiteBundle\Controller;
 use App\Bundle\SiteBundle\Helper\CoreHelper;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
+use eZ\Publish\Core\MVC\Symfony\View\View;
 
 class HomeController extends Controller
 {
